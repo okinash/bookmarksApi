@@ -1,0 +1,31 @@
+bookmarks_api_latest:
+    path:     /latest
+    defaults: { _controller: BookmarksApiBundle:Bookmarks:latest }
+    methods:  [GET]
+
+bookmarks_api_bookmark_get:
+    path:     /{url}
+    defaults: { _controller: BookmarksApiBundle:Bookmarks:get }
+    methods:  [GET]
+    requirements:
+        url: .+
+
+bookmarks_api_bookmark_add:
+    path:     /
+    defaults: { _controller: BookmarksApiBundle:Bookmarks:new }
+    methods:  [POST]
+
+bookmarks_api_bookmark_comment_add:
+    path:     /{bookmarkId}/comments
+    defaults: { _controller: BookmarksApiBundle:Comment:new }
+    methods:  [POST]
+
+bookmarks_api_bookmark_comment_update:
+    path:     /comments/{commentId}
+    defaults: { _controller: BookmarksApiBundle:Comment:update }
+    methods:  [PUT]
+
+bookmarks_api_bookmark_comment_delete:
+    path:     /comments/{commentId}
+    defaults: { _controller: BookmarksApiBundle:Comment:delete }
+    methods:  [DELETE]

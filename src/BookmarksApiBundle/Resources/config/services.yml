@@ -1,0 +1,7 @@
+services:
+    comment.management.service:
+        class: BookmarksApiBundle\Service\CommentManagementService
+        arguments: ['@doctrine.orm.entity_manager']
+    bookmark.management.service:
+        class: BookmarksApiBundle\Service\BookmarkManagementService
+        arguments: ['@doctrine.orm.entity_manager','@validator']

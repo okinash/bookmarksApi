@@ -1,0 +1,7 @@
+bookmarks_api:
+    resource: "@BookmarksApiBundle/Resources/config/routing.yml"
+    prefix:   /bookmarks
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /doc
